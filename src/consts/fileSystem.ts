@@ -1,0 +1,1 @@
+export const fs: FileSystem | undefined = window.require ? window.require('fs') : undefined;
