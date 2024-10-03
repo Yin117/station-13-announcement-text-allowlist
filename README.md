@@ -1,4 +1,4 @@
-# station-13-announcement-text-whitelist
+# station-13-announcement-text-allowlist
 FUNCTIONAL-PROTOTYPE - Station 13 helper tool for allowing you to type a full sentence for an announcement without using any invalid words, with customizable file you can edit.
 
 ---
