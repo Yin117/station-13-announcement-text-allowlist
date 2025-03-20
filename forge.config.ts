@@ -7,19 +7,19 @@ import { AutoUnpackNativesPlugin } from '@electron-forge/plugin-auto-unpack-nati
 import { WebpackPlugin } from '@electron-forge/plugin-webpack';
 import { FusesPlugin } from '@electron-forge/plugin-fuses';
 import { FuseV1Options, FuseVersion } from '@electron/fuses';
-
 import { mainConfig } from './webpack.main.config';
 import { rendererConfig } from './webpack.renderer.config';
+import path from 'path';
 
 const config: ForgeConfig = {
   packagerConfig: {
-    // icon: '/src/assets/appIcons/icon',
+    icon: path.join('icons', 'icon'),
     asar: true,
   },
   rebuildConfig: {},
   makers: [
     new MakerSquirrel({
-      // iconUrl: '/src/assets/appIcons/icon.png'
+      setupIcon: path.join('icons', 'icon.ico'),
     }),
     new MakerZIP({}, ['darwin']),
     new MakerRpm({}),
